@@ -1,3 +1,3 @@
-class model_object:
+class model:
     def __init__(self):
         pass
