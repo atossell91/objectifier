@@ -29,6 +29,7 @@ def extract_nums(line: str):
     return nums
     
 def read_stl(path):
+
     with open(path, 'r') as file:
         for line in file:
             if is_vertex(line):
