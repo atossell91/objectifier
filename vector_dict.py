@@ -44,3 +44,13 @@ class vector_dict:
             return self.add_vector(vector)
         else:
             return index
+        
+    def to_list(self):
+        if self.sort_order != 1:
+            self.sort_by_index()
+
+        vectors = []
+        for vector in self.list:
+            vectors.append(vector[0])
+
+        return vectors

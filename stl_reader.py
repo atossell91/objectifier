@@ -30,7 +30,7 @@ def extract_nums(line: str):
     
     for token in tokens:
         if is_number(token):
-            nums.append(int(token))
+            nums.append(float(token))
     
     return nums
     
