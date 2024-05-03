@@ -30,13 +30,8 @@ def padv(number, amt=8):
 
 def padn(number, amt=7):
     return str(number)
-    #if number < 0:
-    #    return (str(number) + ".").ljust(amt+1, '0')
-    #else:
-    #    return (str(number) + ".").ljust(amt, '0')
 
-def model_to_obj(model: index_model, path) -> str:
-    scale = 0.001
+def model_to_obj(model: index_model, path, scale=1) -> str:
     with open(path, 'w') as file:
         for pos in model.positions:
             file.write(f'v {padv(pos.X * scale)} {padv(pos.Z * scale)} {padv(-pos.Y * scale)}\n')
